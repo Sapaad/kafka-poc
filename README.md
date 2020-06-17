@@ -14,7 +14,7 @@ Please note that `KAFKA_TRUSTED_CERT`, `KAFKA_CLIENT_CERT_KEY`, and `KAFKA_CLIEN
 Set the Kafka topic in
 `kafka/kafka.go:212`
 
-It is not set to `order_events`
+It is now set to `order_events`
 
 ## Step 3
 
