@@ -1,4 +1,4 @@
-# PrintMS
+# KAFKA Consumer in Go
 KAFKA consumer in Golang using Sarama
 
 ## Step 1
