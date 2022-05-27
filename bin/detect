@@ -1,0 +1,9 @@
+#!/bin/bash
+
+if [ -f $1/.install_spark_odbc_drivers ]; then
+    echo "SparkOdbcDriversForDatabricks"
+    exit 0
+else
+    echo "SparkOdbcDriversForDatabricks - Not installing"
+    exit 1
+fi
