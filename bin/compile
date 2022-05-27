@@ -16,14 +16,14 @@ echo "-----> Installing drivers for DSN Less ODBC connection for Databricks"
 
 cd $1
 
-echo Installing unixodbc,unixodbc-dev,freetds-dev,tdsodbc,unzip,libsasl2-modules-gssapi-mit | indent
-apt update && apt install -y unixodbc unixodbc-dev freetds-dev tdsodbc unzip libsasl2-modules-gssapi-mit
+# echo Installing unixodbc,unixodbc-dev,freetds-dev,tdsodbc,unzip,libsasl2-modules-gssapi-mit | indent
+# apt update && apt install -y unixodbc unixodbc-dev freetds-dev tdsodbc unzip libsasl2-modules-gssapi-mit
 
-echo Downloading SimbaSparkODBC-2.6.16.1019-Debian-64bit.zip | indent
-curl -sL https://databricks.com/wp-content/uploads/drivers-2020/SimbaSparkODBC-2.6.16.1019-Debian-64bit.zip -o databricksOdbc.zip && unzip databricksOdbc.zip
+# echo Downloading SimbaSparkODBC-2.6.16.1019-Debian-64bit.zip | indent
+# curl -sL https://databricks.com/wp-content/uploads/drivers-2020/SimbaSparkODBC-2.6.16.1019-Debian-64bit.zip -o databricksOdbc.zip && unzip databricksOdbc.zip
 
-echo Depackaging SimbaSparkODBC-2.6.16.1019-Debian-64bit/simbaspark_2.6.16.1019-2_amd64.deb | indent
-dpkg -i SimbaSparkODBC-2.6.16.1019-Debian-64bit/simbaspark_2.6.16.1019-2_amd64.deb
+# echo Depackaging SimbaSparkODBC-2.6.16.1019-Debian-64bit/simbaspark_2.6.16.1019-2_amd64.deb | indent
+# dpkg -i SimbaSparkODBC-2.6.16.1019-Debian-64bit/simbaspark_2.6.16.1019-2_amd64.deb
 
 echo Setting ENVs ODBCINI, ODBCSYSINI, SIMBASPARKINI| indent
 export ODBCINI=/etc/odbc.ini ODBCSYSINI=/etc/odbcinst.ini SIMBASPARKINI=/opt/simba/spark/lib/64/simba.sparkodbc.ini
